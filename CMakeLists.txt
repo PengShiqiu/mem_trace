@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_definitions(
   -DMEM_PRINT_ENABLE
-  -DMEM_TRACE_PATH="./mem/"
+  -DMEM_TRACE_PATH="./mem_trace/"
 )
 
 add_executable (mem_trace_test

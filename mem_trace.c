@@ -33,7 +33,7 @@ extern void __libc_free(void* p);
 #endif
 
 #ifndef MEM_TRACE_PATH
-#define MEM_TRACE_PATH "/tmp/app_mem/"
+#define MEM_TRACE_PATH "/tmp/mem_trace/"
 #else
 #pragma message("trace save path defined:" PRINT_MACRO(MEM_TRACE_PATH))
 #endif
