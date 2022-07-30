@@ -11,13 +11,16 @@ add_definitions(
   -DMEM_TRACE_PATH="./mem_trace/"
 )
 
+# build library
+add_library(mem_trace  
+  mem_trace.c
+  mem_trace.h)
+target_link_libraries(mem_trace; -ldl)
+set_target_properties(mem_trace PROPERTIES LINKER_LANGUAGE CXX)
+
 add_executable (mem_trace_test
   main.cpp
-  mem_trace.c
-  mem_trace.h
 )
-
 target_link_libraries(mem_trace_test 
-  -ldl
+  mem_trace
 )
-
